@@ -14,3 +14,6 @@ http://sinonjs.org/ </br>
 http://sinonjs.org/docs/ </br>
 http://www.browsersync.io/ </br>
 http://sweetme.at/2013/08/08/sublime-text-keyboard-shortcuts/ </br>
+<p>
+	Test files and test case files have all been commented out for demonstations and the handon exersice. To see all test pass remove all comments in the todo.js and todo-test.js files.
+</p>
