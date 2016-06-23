@@ -1,0 +1,29 @@
+{
+  "name": "unconference",
+  "version": "1.0.0",
+  "description": "JavaScript Unit testing code samples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madjava/unconf.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Felix Eyetan (eyetanfelix@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madjava/unconf/issues"
+  },
+  "homepage": "https://github.com/madjava/unconf#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "mocha": "^2.5.3",
+    "should": "^9.0.2"
+  }
+}
