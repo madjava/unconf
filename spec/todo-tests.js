@@ -5,26 +5,26 @@ var should = chai.should();
 /**
  * Example 1. Testing our Object Under Test
  */
-describe('Test that the Todo script exists', function() {
-	// var todo;
-	// before(function() {
-	// 	todo = new Todo();
-	// });
+describe('Test that the Todo script exists', function() { 
+	var todo;
+	before(function() {
+		todo = new Todo();
+	});
 
-	// //1. Using expect matcher
-	// it('Should have the object existing - expect', function() {
-	// 	expect(todo).to.be.an('object');
-	// });
+	//1. Using expect matcher
+	it('Should have the object existing - expect', function() {
+		expect(todo).to.be.an('object');
+	});
 
-	// //2. Using assertion matcher
-	// it('Should have the object existing - assert', function() {
-	// 	assert.typeOf(todo, 'object', 'should be a valid Todo object');
-	// });
+	//2. Using assertion matcher
+	it('Should have the object existing - assert', function() {
+		assert.typeOf(todo, 'object', 'should be a valid Todo object');
+	});
 
-	// //3. Using should matcher
-	// it('Should have the object existing - should', function() {
-	// 	todo.should.be.a('object');
-	// });
+	//3. Using should matcher
+	it('Should have the object existing - should', function() {
+		todo.should.be.a('object');
+	});
 });
 
 
@@ -32,61 +32,59 @@ describe('Test that the Todo script exists', function() {
  * Example 2. Test our Objects core public API, ensuring its consistency
  */
 describe('Test that relevant API exist and behaves as expected', function() {
-	// var todo;
-	// before(function() {
-	// 	todo = new Todo();
-	// });
+	var todo;
+	before(function() {
+		todo = new Todo();
+	});
 
-	// it('should have to owner property existing', function() {
-	// 	expect(todo).to.have.property('owner').and.to.equal('Unknown');
-	// });
+	it('should have to owner property existing', function() {
+		expect(todo).to.have.property('owner').and.to.equal('Unknown');
+	});
 
-	//** Ex. 1a - Uncomment block, test should fail. Make test pass 
-	// it('should have its accessor methods in existence', function(){
-	// todo.should.have.property('getOwner');
-	// });
+	it('should have its accessor methods in existence', function(){
+	todo.should.have.property('getOwner');
+	});
 
-	//** Ex. 1b - Uncomment block, test should fail. Make test pass 
-	// it('should have the owner property correctly when object is created', function(){
-	//    todo = new Todo('John Doe');
-	//    expect(todo.getOwner()).to.equal('John Doe');
-	// });
+	it('should have the owner property correctly when object is created', function(){
+	   todo = new Todo('John Doe');
+	   expect(todo.getOwner()).to.equal('John Doe');
+	});
 
-	//** Ex. 2 - Uncomment block, test should fail. Make test pass 
-	// it('should have the owner property correctly', function(){
-	//    todo = new Todo('John Doe');
-	//    todo.setOwner('Jane Doe');
-	//    expect(todo.getOwner()).to.equal('Jane Doe');
-	// });
+	
+	it('should have the owner property correctly', function(){
+	   todo = new Todo('John Doe');
+	   todo.setOwner('Jane Doe');
+	   expect(todo.getOwner()).to.equal('Jane Doe');
+	});
 });
 
 /**
  * Example 3. Mocking Ajax calls in unit tests
  */
 describe('When i request for days of the week from the server', function() {
-	// 	var todo;
-	// 	beforeEach(function() {
-	// 		todo = new Todo('Jane Doe');
-	// 		sinon.stub($, 'ajax').yieldsTo('success', {
-	//         days : ["Monday"]
-	//       });
-	// 	});
+		var todo;
+		beforeEach(function() {
+			todo = new Todo('Jane Doe');
+			sinon.stub($, 'ajax').yieldsTo('success', {
+	        days : ["Monday"]
+	      });
+		});
 
-	// 	afterEach(function() {
-	// 		$.ajax.restore();
-	// 	});
+		afterEach(function() {
+			$.ajax.restore();
+		});
 
-	// 	it('#fetchDays - should make a valid call to /data api', function(done) {
-	// 		todo.fetchDays();
-	// 		expect($.ajax.calledOnce).to.be.true;
-	// 		done();
-	// 	});
+		it('#fetchDays - should make a valid call to /data api', function(done) {
+			todo.fetchDays();
+			expect($.ajax.calledOnce).to.be.true;
+			done();
+		});
 
-	// 	it('#getDays - should have been set to correct values', function(done) {
-	// 		todo.fetchDays();
-	// 		expect(todo.getDays()[0]).to.equal("Monday"); 
-	// 		done();
-	// 	});
+		it('#getDays - should have been set to correct values', function(done) {
+			todo.fetchDays();
+			expect(todo.getDays()[0]).to.equal("Monday"); 
+			done();
+		});
 });
 
 /**
